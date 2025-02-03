@@ -8,7 +8,7 @@ import Contacts from './components/Contacts'
 function App() {
   return (
     <BrowserRouter>
-      <div className="App">
+      <div className="App min-h-[100vh] pb-[68px] relative bg-slate-200">
         <Routes>
           <Route path="/" element={<MainLayout />}>
             <Route index element={<Home />} />
