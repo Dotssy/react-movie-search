@@ -1,12 +1,15 @@
 import { useState } from 'react'
+import { useMovieSearchContext } from '../context/MovieSearchContext'
 
 const SearchForm = () => {
   const [movieNameInput, setMovieNameInput] = useState('')
+  const { setUserQuery } = useMovieSearchContext()
 
   const handleSubmit = (e) => {
     e.preventDefault()
 
-    if (!movieNameInput) return
+    if (!movieNameInput.trim()) return
+    setUserQuery(movieNameInput.trim())
   }
 
   return (

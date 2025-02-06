@@ -8,7 +8,14 @@ const Home = () => {
       </h1>
       <p>
         This is a simple React Movie Search SPI made using React-Router, Context
-        API, Tailwind CSS and API.
+        API, Tailwind CSS and{' '}
+        <a
+          href="https://www.omdbapi.com"
+          className="text-blue-500 hover:text-blue-400 hover:underline transition-colors"
+        >
+          omdbapi.com
+        </a>
+        .
       </p>
       <p>
         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quas illum
