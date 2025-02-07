@@ -25,7 +25,7 @@ const Home = () => {
         molestiae?
       </p>
       <Link
-        to="search"
+        to="movies"
         className="text-blue-500 hover:text-blue-400 hover:underline transition-colors"
       >
         Start searching

@@ -6,7 +6,7 @@ const Navigation = () => {
       <NavLink to="." end>
         Home
       </NavLink>
-      <NavLink to="search">Search</NavLink>
+      <NavLink to="movies">Movies</NavLink>
       <NavLink to="about">About</NavLink>
       <NavLink to="contacts">Contacts</NavLink>
     </nav>

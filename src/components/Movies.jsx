@@ -1,7 +1,7 @@
 import SearchForm from './SearchForm'
 import MovieList from './MovieList'
 
-const Search = () => {
+const Movies = () => {
   return (
     <div className="text-2xl flex flex-col gap-8 text-gray-600">
       <SearchForm />
@@ -10,4 +10,4 @@ const Search = () => {
   )
 }
 
-export default Search
+export default Movies

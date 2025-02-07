@@ -20,7 +20,7 @@ const MovieCard = ({ movieData }) => {
           {Year}, {Type}
         </span>
         <Link
-          to={`../movies/${slug}`}
+          to={slug}
           className="text-blue-400 text-xl hover:underline hover:text-blue-300 transition-colors"
         >
           Read more
