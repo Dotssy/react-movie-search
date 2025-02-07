@@ -40,7 +40,7 @@ const MovieSearchProvider = ({ children }) => {
     fetchMovies(fetchUrl)
   }, [userQuery])
 
-  const contextValue = { movies, setUserQuery, error }
+  const contextValue = { movies, setUserQuery, error, setError }
 
   return (
     <MovieSearchContext.Provider value={contextValue}>

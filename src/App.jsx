@@ -4,6 +4,7 @@ import Home from './components/Home'
 import Search from './components/Search'
 import About from './components/About'
 import Contacts from './components/Contacts'
+import UserWarning from './components/UserWarning'
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
             <Route path="contacts" element={<Contacts />} />
           </Route>
         </Routes>
+        <UserWarning />
       </div>
     </BrowserRouter>
   )
