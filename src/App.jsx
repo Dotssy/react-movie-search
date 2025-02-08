@@ -4,6 +4,7 @@ import Home from './components/Home'
 import Movies from './components/Movies'
 import About from './components/About'
 import Contacts from './components/Contacts'
+import NotFound from './components/NotFound'
 import UserWarning from './components/UserWarning'
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
             <Route path="movies" element={<Movies />} />
             <Route path="about" element={<About />} />
             <Route path="contacts" element={<Contacts />} />
+            <Route path="*" element={<NotFound />} />
           </Route>
         </Routes>
         <UserWarning />
