@@ -8,7 +8,10 @@ import { generateSlug } from '../utils/generateSlug.js'
 const inititalErrorObj = { type: '', message: '' }
 
 const MovieSearchProvider = ({ children }) => {
-  const [userQuery, setUserQuery] = useState('')
+  const [userQuery, setUserQuery] = useState({
+    movieName: '',
+    searchType: '',
+  })
   const [movies, setMovies] = useState([])
   const [error, setError] = useState(inititalErrorObj)
 
@@ -33,14 +36,15 @@ const MovieSearchProvider = ({ children }) => {
   }
 
   useEffect(() => {
-    if (!userQuery) return
-    const fetchUrl = `http://www.omdbapi.com/?apikey=${API_KEY}&s=${userQuery}`
+    const { movieName, searchType } = userQuery
+    if (!movieName) return
+    const fetchUrl = `http://www.omdbapi.com/?apikey=${API_KEY}&s=${movieName}&type=${searchType}`
     setError(inititalErrorObj) // Clear errors
     setMovies([]) // Clear movies
     fetchMovies(fetchUrl)
   }, [userQuery])
 
-  const contextValue = { movies, setUserQuery, error, setError }
+  const contextValue = { movies, userQuery, setUserQuery, error, setError }
 
   return (
     <MovieSearchContext.Provider value={contextValue}>
