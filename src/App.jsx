@@ -4,6 +4,7 @@ import Home from './components/Home'
 import Movies from './components/Movies'
 import About from './components/About'
 import Contacts from './components/Contacts'
+import MoviePage from './components/MoviePage'
 import NotFound from './components/NotFound'
 import UserWarning from './components/UserWarning'
 
@@ -15,6 +16,7 @@ function App() {
           <Route path="/" element={<MainLayout />}>
             <Route index element={<Home />} />
             <Route path="movies" element={<Movies />} />
+            <Route path="movies/:slug" element={<MoviePage />} />
             <Route path="about" element={<About />} />
             <Route path="contacts" element={<Contacts />} />
             <Route path="*" element={<NotFound />} />

@@ -14,8 +14,10 @@ const MovieSearchProvider = ({ children }) => {
   })
   const [movies, setMovies] = useState([])
   const [error, setError] = useState(inititalErrorObj)
+  const [isLoading, setIsLoading] = useState(false)
 
   const fetchMovies = async (url) => {
+    setIsLoading(true)
     await axios
       .get(url)
       .then((res) => {
@@ -29,9 +31,11 @@ const MovieSearchProvider = ({ children }) => {
 
           setMovies(moviesWithSlug)
         }
+        setIsLoading(false)
       })
       .catch((error) => {
         setError({ type: 'error', message: error.message })
+        setIsLoading(false)
       })
   }
 
@@ -44,7 +48,14 @@ const MovieSearchProvider = ({ children }) => {
     fetchMovies(fetchUrl)
   }, [userQuery])
 
-  const contextValue = { movies, userQuery, setUserQuery, error, setError }
+  const contextValue = {
+    movies,
+    userQuery,
+    setUserQuery,
+    error,
+    setError,
+    isLoading,
+  }
 
   return (
     <MovieSearchContext.Provider value={contextValue}>
