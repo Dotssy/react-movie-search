@@ -7,7 +7,7 @@ const MovieCard = ({ movieData }) => {
 
   return (
     <div>
-      <div className="flex min-h-[333px] bg-slate-300 justify-center items-center overflow-hidden">
+      <div className="flex min-h-[333px] justify-center items-center overflow-hidden">
         {Poster !== 'N/A' ? (
           <img src={Poster} alt="Poster" />
         ) : (

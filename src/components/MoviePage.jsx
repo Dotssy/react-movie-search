@@ -45,8 +45,8 @@ const MoviePage = () => {
       ) : (
         <div>
           <h1 className="text-4xl text-gray-500">{movieData.Title}</h1>
-          <div className="flex mt-5 gap-10">
-            <div className="flex min-w-[300px] min-h-[450px] justify-center items-start overflow-hidden">
+          <div className="flex mt-5 gap-10 max-[620px]:flex-col">
+            <div className="flex min-w-[300px] min-h-[450px] justify-center items-start max-[620px]:items-center overflow-hidden">
               {movieData.Poster === 'N/A' ? (
                 <div className="flex w-full h-full bg-slate-300 justify-center items-center">
                   <MdOutlineNoPhotography size={50} className="text-gray-400" />

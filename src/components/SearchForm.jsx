@@ -33,7 +33,7 @@ const SearchForm = () => {
           Search
         </button>
       </div>
-      <div className="flex justify-center gap-5 mt-1.5 text-base text-gray-500">
+      <div className="flex justify-center gap-5 mt-5 text-base text-gray-500">
         <label className="flex gap-1.5 cursor-pointer">
           <input
             type="radio"
