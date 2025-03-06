@@ -32,7 +32,7 @@ const MoviePage = () => {
   )
 
   useEffect(() => {
-    const fetchUrl = `http://www.omdbapi.com/?apikey=${API_KEY}&i=${movieID}&plot=full`
+    const fetchUrl = `https://www.omdbapi.com/?apikey=${API_KEY}&i=${movieID}&plot=full`
     fetchMovieData(fetchUrl)
   }, [movieID, fetchMovieData])
 

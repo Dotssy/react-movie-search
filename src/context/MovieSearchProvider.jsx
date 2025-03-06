@@ -42,7 +42,7 @@ const MovieSearchProvider = ({ children }) => {
   useEffect(() => {
     const { movieName, searchType } = userQuery
     if (!movieName) return
-    const fetchUrl = `http://www.omdbapi.com/?apikey=${API_KEY}&s=${movieName}&type=${searchType}`
+    const fetchUrl = `https://www.omdbapi.com/?apikey=${API_KEY}&s=${movieName}&type=${searchType}`
     setError(inititalErrorObj) // Clear errors
     setMovies([]) // Clear movies
     fetchMovies(fetchUrl)
